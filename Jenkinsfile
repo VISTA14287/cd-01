@@ -1,5 +1,5 @@
 
-  env.DOCKERHUB_USERNAME = 'VISTA14287'
+  env.DOCKERHUB_USERNAME = 'vista14287'
 
   node("docker-test") {
     checkout scm
