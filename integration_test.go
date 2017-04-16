@@ -31,7 +31,7 @@ func TestIntegration(t *testing.T) {
 		if err != nil {
 			t.Error(err)
 		}
-		if body, err := ioutil.ReadAll(resp.Body); err != nil {
+		if body, err := ioutil.ReadAll(resp.Body);  err != nil {
 			t.Error(err)
 		} else if string(body) != x.reply {
 			t.Error("oops we have a problem: expected reply - ", x.reply, ", but got - ", string(body))
