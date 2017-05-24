@@ -1,7 +1,7 @@
 
   env.DOCKERHUB_USERNAME = 'vista14287'
 
-  node("master") {
+  node("docker-test") {
     checkout scm
 
     stage("Unit Test") {
@@ -33,7 +33,7 @@
     }
   }
 
-  node("master") {
+  node("docker-stage") {
     checkout scm
 
     stage("Staging") {
@@ -52,7 +52,7 @@
     }
   }
 
-  node("master") {
+  node("docker-prod") {
     stage("Production") {
       try {
         // Create the service if it doesn't exist otherwise just update the image
